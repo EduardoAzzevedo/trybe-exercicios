@@ -5,7 +5,12 @@ body {
         font-size: 65px;
         color: orange;
         font-family: sans-serif;
-    
+    }
+    #muda-cor {
+      background-color: peachpuff;
+      text-align: center;
+      text-decoration: underline;
+  }
     .fundo-muda {
         background-color: powderblue;
         font-weight: 600;
