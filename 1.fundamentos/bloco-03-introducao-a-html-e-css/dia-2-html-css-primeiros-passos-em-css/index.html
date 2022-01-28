@@ -4,15 +4,34 @@
     <meta charset="UTF-8">
     <title>HTML</title>
     <style>
+      body {
+        font-size: 16px
+      }
         #tamanho-h1 {
             font-size: 65px;
             color: orange;
+            font-family: sans-serif;
         }
         #muda-cor {
             background-color: peachpuff;
+            text-align: center;
+            text-decoration: underline;
         }
         .fundo-muda {
             background-color: powderblue;
+            font-weight: 600;
+            font-size: 3em;
+            font-style: italic;
+            line-height: 2;
+        }
+        #li1 {
+          background-color: yellow;
+        }
+        #li2 {
+          background-color: red;
+        }
+        #li3 {
+          background-color: brown;
         }
 
 
@@ -22,9 +41,9 @@
     <h1 id="tamanho-h1">Exercícios 3.2</h1>
     <p class="fundo-muda">Qual é a sua cor favorita?</p>
     <ul id="muda-cor" class="fundo-muda">
-      <li>Amarelo</li>
-      <li>Vermelho</li>
-      <li>Marrom</li>
+      <li id="li1">Amarelo</li>
+      <li id="li2">Vermelho</li>
+      <li id="li3">Marrom</li>
     </ul>
   </body>
 </html>
