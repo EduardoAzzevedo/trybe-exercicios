@@ -2,10 +2,10 @@
 // faz.
 //--Como desafio, faça o programa funcionar tanto se receber o nome de uma peça com letras 
 //maiúsculas quanto com letras minúsculas, sem aumentar a quantidade de condicionais.
-const pecaDeXadrez = "Cavalo";
+const pecaDeXadrez = "rainha";
 
-if (pecaDeXadrez == "Rainha".toLowerCase("rainha") || "rainha".toUpperCase("Rainha")) {
-    console.log("pode movimentar-se quantas casas quiser ou puder, na diagonal, vertical ou horizontal, porém, apenas em um sentido em cada jogada.");
+if (pecaDeXadrez == "Rainha" && pecaDeXadrez == pecaDeXadrez.toLowerCase()) {
+    console.log(pecaDeXadrez , 'mova para qualquer lado');
 }else {
-    console.log("Bispo vá para a diagonal.");
+  console.log('Bispo, para diagonal.');
 }
