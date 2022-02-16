@@ -1,0 +1,24 @@
+let container = document.getElementById('first');
+
+function createDivElement(classes) {
+	let newDiv = document.createElement('div');
+	newDiv.className = classes;
+	return newDiv;
+}
+
+coutainer.appendChild(createDivElement('red small circle'));
+
+createDivElement('red small circle');
+createDivElement('green medium square');
+
+function addElement(parent,child) {
+	parent.appendChild(child);
+}
+addElement(container,createDivElement('red small circle'));
+
+let features = ['yellow circle small', 'green square small', 'red circle small'];
+
+for (lt feature of features) {
+	let element = createDivElement(feature);
+	addElement(container, element);
+}
