@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+      section {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      //1
+      const elementH1 = document.createElement('h1');
+      elementH1.innerText = 'Exercício 5.2 - JavaScript DOM';
+      document.body.appendChild(elementH1);
+      //2
+      const elementMain = document.createElement('main');
+      elementMain.className = '.main-content';
+      document.body.appendChild(elementMain);
+      //3
+      const elementSectionCenter = document.createElement('section');
+      elementSectionCenter.className = '.center-content';
+      elementMain.appendChild(elementSectionCenter);
+      //4
+      const paragraph = document.createElement('p');
+      paragraph.innerText = 'Algum Texto :P';
+      elementSectionCenter.appendChild(paragraph);
+      //5
+      const elementSectionLeft = document.createElement('section');
+      elementSectionLeft.className = '.left-content';
+      elementMain.appendChild(elementSectionLeft);
+      //6
+      const elementSectionRight = document.createElement('section');
+      elementSectionRight.className = '.right-content';
+      elementMain.appendChild(elementSectionRight);
+      //7
+      const image = document.createElement('img');
+      image.className = '.small-image';
+      image.scr = `https://picsum.photos/200`;
+      elementSectionLeft.appendChild(image);
+      //8
+      let listUl = document.createElement('ul');
+      let arrayUmADez = ['Um', 'Dois', 'Três', 'Quatro', 'Cinco', 'Seis', 'Sete', 'Oito', 'Nove', 'Dez'];
+
+      for (let index = 0; index < arrayUmADez.length; index += 1) {
+        let li = document.createElement('li');
+        li.innerText = arrayUmADez[index];
+        listUl.appendChild(li);
+      }
+      elementSectionRight.appendChild(listUl);
+      //9
+      for (let index = 0; index < 3; index += 1) {
+        const elementH3 = document.createElement('h3');
+        elementH3.innerText = index;
+        elementMain.appendChild(elementH3);
+      }
+      //Parte II exercícios
+
+      //1
+      elementH1.className = 'title';
+      //2
+      const elementH3 = document.getElementsByName('h3')
+      for (let index = 0; index < 3; index += 1) {
+        elementH3[index].className = 'description';
+      }
+      //3
+      const elementSectionLeft = document.getElementsByClassName('left-content')[0];
+      elementMain.removeChild(elementSectionLeft);
+      //4
+      const sectionRightContent = document.getElementsByClassName('right-content')[0];
+      sectionRightContent.style.marginRight='auto';
+      //5
+      const sectionCenterContent = document.getElementsByClassName('center-content')[0];
+      sectionCenterContent.parentNode.style.backgroundColor = 'green';
+      //6
+      ul.lastChild.remove();
+      ul.lastChild.remove();
+    </script>
+  </body>
+</html>

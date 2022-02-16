@@ -37,3 +37,17 @@ primeiroFilhoDoFilho.appendChild(filhoPrimeiroFilhoDoFilho);
 //4. A partir desse filho criado, acesse terceiroFilho.
 const terceiroFilho = filhoPrimeiroFilhoDoFilho.parentElement.parentElement.nextElementSibling;
 console.log(terceiroFilho);
+
+// Parte III
+
+//1. Remova todos os elementos filhos de paiDoPai exceto pai , elementoOndeVoceEsta e primeiroFilhoDoFilho .
+const pai = document.getElementById('pai');
+for (let index = pai.childNodes.length; index >= 0; index -= 1) {
+  const currentChildren = pai.childNodes[index];
+  if (currentChildren.id !== 'elementoOndeVoceEsta') {
+    currentChildren.remove
+  }
+}
+
+const segundoEUltimoFilhoDoFilho = document.getElementById('segundoEUltimoFilhoDoFilho');
+segundoEUltimoFilhoDoFilho.remove();
