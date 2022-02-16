@@ -66,9 +66,13 @@
       elementMain.className = '.main-content';
       document.body.appendChild(elementMain);
       //3
-      const elementSection = document.createElement('section');
-      elementSection.className = '.center-content';
-      elementMain.appendChild(elementSection);
+      const elementSectionCenter = document.createElement('section');
+      elementSectionCenter.className = '.center-content';
+      elementMain.appendChild(elementSectionCenter);
+      //4
+      const paragraph = document.createElement('p');
+      paragraph.innerText = 'Algum Texto :P';
+      elementSectionCenter.appendChild(paragraph);
     </script>
   </body>
 </html>
